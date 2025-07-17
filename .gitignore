@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+
+# Temporary zip files
+*.zip
+
+# Temporary folder used during unpacking
+temp_unpacked/
+
+# Automatically generated output files
+*.json
+*.md
