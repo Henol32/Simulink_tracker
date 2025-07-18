@@ -19,6 +19,7 @@ To run this tool, you need:
 Check with:
 ```bash
 python3 --version
+```
 
 
 ### ✅ tkinter (for file browsing)
@@ -49,12 +50,13 @@ Clone the repo or download simulink_tracker.py to your computer.
   ```
 
 ### 📁 What It Does
-Option 1 extracts all blocks from your .slx and saves them in baseline.json.
 
-Option 2 lets you pick another .slx file, compares it to the baseline, and writes a Markdown report like:
+**Option 1** extracts all blocks from your .slx and saves them in baseline.json.
+
+**Option 2** lets you pick another .slx file, compares it to the baseline, and writes a Markdown report like:
 
 change_report_2025-07-16_15-22.md
 
-Option 3 Exits the code
+**Option 3** Exits the code
 
 
