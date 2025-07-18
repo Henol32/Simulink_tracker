@@ -29,6 +29,8 @@ On Linux, install it using:
 
 ```bash
 sudo apt install python3-tk
+or
+sudo dnf install python3-tkinter
 ```
 
 ## 🛠️ How to Use
