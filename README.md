@@ -19,7 +19,7 @@ To run this tool, you need:
 Check with:
 ```bash
 python3 --version
-```
+
 
 ### ✅ tkinter (for file browsing)
 
@@ -28,23 +28,27 @@ On Linux, install it using:
 
 ```bash
 sudo apt install python3-tk
+```
 
----------------------------------------------------------------------------------------------------------------------
+## 🛠️ How to Use
 
-🛠️ How to Use
-1. Download the script
+**1. Download the script**
 Clone the repo or download simulink_tracker.py to your computer.
 
-2. Run the script
+**2. Run the script**
+  ```bash
   python3 simulink_tracker.py
+  ```
 
-3. Choose an option from the menu:
+**3. Choose an option from the menu:**
+  ```bash
   📊 Simulink Change Tracker
   1. Create a new baseline
   2. Compare to existing baseline
   3. Exit
+  ```
 
-📁 What It Does
+### 📁 What It Does
 Option 1 extracts all blocks from your .slx and saves them in baseline.json.
 
 Option 2 lets you pick another .slx file, compares it to the baseline, and writes a Markdown report like:
