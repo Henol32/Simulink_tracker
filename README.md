@@ -34,6 +34,7 @@ sudo apt install python3-tk
 ## 🛠️ How to Use
 
 **1. Download the script**
+
 Clone the repo or download simulink_tracker.py to your computer.
 
 **2. Run the script**
