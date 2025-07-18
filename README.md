@@ -19,6 +19,7 @@ To run this tool, you need:
 Check with:
 ```bash
 python3 --version
+```
 
 ### ✅ tkinter (for file browsing)
 
