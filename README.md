@@ -20,9 +20,8 @@ Check with:
 ```bash
 python3 --version
 
-**### ✅ tkinter (for file browsing)**
+✅ tkinter (for file browsing)
 On Windows and macOS, tkinter is usually included.
-
 On Linux, install it using:
 
 ```bash
@@ -32,7 +31,7 @@ sudo apt install python3-tk
 
 🛠️ How to Use
 1. Download the script
-  Clone the repo or download simulink_tracker.py to your computer.
+Clone the repo or download simulink_tracker.py to your computer.
 
 2. Run the script
   python3 simulink_tracker.py
