@@ -20,7 +20,7 @@ Check with:
 ```bash
 python3 --version
 
-✅ tkinter (for file browsing)
+### ✅ tkinter (for file browsing)
 On Windows and macOS, tkinter is usually included.
 On Linux, install it using:
 
