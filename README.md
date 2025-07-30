@@ -1,37 +1,27 @@
 # 🔍 Simulink Change Tracker
 
-This Python tool lets you compare `.slx` Simulink models and automatically generate a Markdown report that highlights:
-- ✅ Unchanged blocks
-- ➕ Added blocks
-- ❌ Removed blocks
-- 🔁 Blocks with changed parameters
+Compare two `*.slx` models and get a tidy Markdown report showing
 
-It's perfect for keeping track of model iterations during development.
+|   | Section | What you’ll see |
+|---|---------|-----------------|
+| ✅ | **Unchanged Blocks** | blocks whose type & parameters are identical |
+| ➕ | **Added Blocks** | blocks present only in the new model |
+| ❌ | **Removed Blocks** | blocks missing from the new model |
+| 🔁 | **Changed Blocks** | same block, parameters changed |
+| 🔀 | **Connection Changes** | new / removed / modified lines |
+| 📷 | **Model thumbnails** | side-by-side screenshots (if Simulink saved one) |
 
----
+Each run is archived in its own timestamped folder, so you keep a history of all comparisons.
+
 
 ## 📦 Requirements
 
-To run this tool, you need:
+| Needed | Check dependency | 
+|----|------------|
+| Python **3.9+** | `python3 --version` |
+| Tk file-dialog (`tkinter`) | Windows/macOS: included<br>Ubuntu / Debian:<br>`sudo apt install python3-tk`<br>Fedora:<br>`sudo dnf install python3-tkinter` |
 
-### ✅ Python 3.9+ installed
-
-Check with:
-```bash
-python3 --version
-```
-
-
-### ✅ tkinter (for file browsing)
-
-On Windows and macOS, tkinter is usually included.
-On Linux, install it using:
-
-```bash
-sudo apt install python3-tk
-or
-sudo dnf install python3-tkinter
-```
+No third-party Python packages required.
 
 ## 🛠️ How to Use
 
@@ -62,4 +52,44 @@ change_report_2025-07-16_15-22.md
 
 **Option 3** Exits the code
 
+
+## ⚙️ Configuration
+**Ignored parameters**
+Cosmetic fields such as "Position" and the huge
+"ScopeSpecificationString" are skipped.
+Edit IGNORED_PARMS near the top of simulink_tracker.py to tweak.
+
+**Run-folder location**
+new_run_dir() creates folders next to the script; change the base path if
+you want them elsewhere.
+
+## Viewing the report
+**Tip:** open the .md file in a Markdown viewer to see tables & images.
+
+VS Code: press Ctrl + Shift + V or right-click → Open Preview
+
+GitHub/GitLab: just click the file in the repo
+
+## 📝 Example output 
+# Simulink Change Report (2025-07-29 at 16:07)
+
+## 📷 Model thumbnails
+
+| Baseline | New |
+|----------|-----|
+| ![baseline](baseline_thumb.png) | ![new](new_thumb.png) |
+
+## ➕ Added Blocks
+- `Constant` **Subsystem/Constant1** (SID 5): `{'Value': '3'}`
+
+## 🔁 Changed Blocks
+- `Constant` **Constant** (SID 2) changed:
+    - `Value`: `3` → `14`
+
+## 🔀 Connection Changes
+### ➕ Added Lines
+- `Constant1` (Port 1) → `Product` (Port 3)
+
+### 🔁 Modified Lines
+- `Product` (Port 1): `Scope2` → `Scope`
 
